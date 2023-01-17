@@ -104,7 +104,6 @@
 
             #endregion
 
-
             #region Arrayin icinde 3 bolunen reqemlerin ededi ortasini tapan alqoritma
             //int[] numbers = { 33, 10, 12, 64, 27, 11 };
 
@@ -125,13 +124,13 @@
             #endregion
 
             #region Arrayin icinde 3 reqemli eded olub olmadigini yoxlayan proqram
-            int[] numbers = { 21, 123, 25, 456, 12, 65, 1000 };
-            string numbersStr;
+            int[] numbers = { 21, 123, 525, -456, -112, -65, 1000 };
+            string numberStr;
             int count = 0;
             for (int i = 0; i < numbers.Length; i++)
             {
-                numbersStr = Convert.ToString(numbers[i]);
-                if (numbersStr.Length==3)
+                numberStr = Convert.ToString(numbers[i]);
+                if (numberStr.Length == 3 && numberStr[0] != '-' || numberStr.Length == 4 && numberStr[0] == '-')
                 {
                     count++;
                 }
@@ -145,7 +144,7 @@
             {
                 Console.WriteLine("Arrayin icinde 3 reqemli eded yoxdur");
             }
-            
+
             #endregion
         }
     }
